@@ -7,9 +7,9 @@
 
 using namespace std;
 
-struct Point
+template <class T> struct Point
 {
-	double x, y;
+	T x, y;
 };
 
 class Figure {
@@ -87,7 +87,7 @@ public:
 
 	void setDot(T x, T y)
 	{
-		Point d;
+		Point<T> d;
 		d.x = x;
 		d.y = y;
 
@@ -121,7 +121,7 @@ public:
 
 
 private:
-	vector<Point> dots;
+	vector<Point<T>> dots;
 };
 
 template <class T> class Rectangle : public Figure
